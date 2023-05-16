@@ -1,6 +1,6 @@
-import "./App.css";
 import "antd/dist/reset.css";
-import { Button } from "antd";
+import { PoweroffOutlined } from "@ant-design/icons";
+import { Button, Table } from "antd";
 import { useState } from "react";
 
 function App() {
@@ -13,9 +13,15 @@ function App() {
   };
   return (
     <div className="App">
-      <Button type="primary" loading={loading} onClick={handleBtnClic}>
+      <Button
+        type="primary"
+        loading={loading}
+        onClick={handleBtnClic}
+        icon={<PoweroffOutlined />}
+      >
         Explore AntDesign
       </Button>
+      <Table />
     </div>
   );
 }
